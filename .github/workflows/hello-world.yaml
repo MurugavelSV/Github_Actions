@@ -1,6 +1,6 @@
 name: Variable
 on:
-  worflow_dispatch:
+  workflow_dispatch:
 env:
   MY_VARIABLE: ${{secrets.MY_VARIABLE}}
 jobs:
