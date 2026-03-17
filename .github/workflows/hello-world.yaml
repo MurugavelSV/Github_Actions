@@ -1,8 +1,11 @@
-name: Hello World
-on: [push]
+name: Variable
+on:
+  worflow_dispatch:
+env:
+  MY_VARIABLE: ${{secrets.MY_VARIABLE}}
 jobs:
-  build:
+  print-variable:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World Action
-        run: echo "Hello, World!"
+      - name: Print variable
+        run: echo "The value of variable:" $MY_VARIABLE
